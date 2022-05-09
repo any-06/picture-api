@@ -14,10 +14,10 @@ class JokeFactory extends Factory
     public function definition()
     {
         return [
-            'image' => $this->faker->string(255),
-            'title' => $this->faker->string(255),
+            'image' => $this->faker->imageUrl(640, 480, $this->faker->words(2,true), true),
+            'title' => $this->faker->sentence(3),
             'text' => $this->faker->text(),
-            'user' => $this->faker->string(55),
+            'user' => $this->faker->word(1),
         ];
     }
 }

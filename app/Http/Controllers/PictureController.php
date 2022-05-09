@@ -14,7 +14,7 @@ class PictureController extends Controller
      */
     public function index()
     {
-        //
+        return Picture::all();
     }
 
     /**

@@ -19,3 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('picture','App\Http\Controllers\PictureController');
+
+Route::apiResource('joke','App\Http\Controllers\JokeController');

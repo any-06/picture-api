@@ -15,10 +15,10 @@ class CreateJokesTable extends Migration
     {
         Schema::create('jokes', function (Blueprint $table) {
             $table->id();
-            $table->string('image',255);
+            $table->string('image',255)->default('https://pbs.twimg.com/media/Et83P9YXcAAHUnE.jpg:large');
             $table->string('title',255);
             $table->text('text');
-            $table->string('user',55);
+            $table->string('user',55)->nullable(true);
             $table->timestamps();
         });
     }

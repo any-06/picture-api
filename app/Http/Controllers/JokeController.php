@@ -18,7 +18,7 @@ class JokeController extends Controller
         $page = $request->has('page') ? $request->get('page') : 1;
         $limit = $request->has('limit') ? $request->get('limit') : 10;
         $offset = ($page -1)*$limit;
-        return Joke::orderBy('created_at','Asc')
+        return Joke::orderBy('created_at','Desc')
         ->limit($limit)
         ->offset($offset)
         ->get();
